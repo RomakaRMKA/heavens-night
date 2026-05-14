@@ -37,7 +37,7 @@ function App() {
           </ul>
         </nav>
         <div className="location-note">
-          <h4>Moogle (Chaos), Shirogane Ward 24 Plot 1</h4>
+          <h4>Moogle (Chaos), Shirogane Ward 27, Plot 41</h4>
         </div>
       </section>
 
