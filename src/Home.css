@@ -56,17 +56,145 @@
   }
 }
 
-#center {
+.page-shell {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  min-height: 100%;
+}
+
+#page-top.page-header {
+  display: flex;
+  flex-direction: column;
   place-content: center;
   place-items: center;
-  flex-grow: 1;
+  gap: 24px;
+  transition: padding 0.3s ease, gap 0.3s ease;
+}
 
-  @media (max-width: 1024px) {
+.page-shell.is-home #page-top.page-header {
+  flex-grow: 1;
+  padding: 64px 24px 24px;
+}
+
+.page-shell.is-inner #page-top.page-header {
+  flex-grow: 0;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  gap: 14px;
+}
+
+.logo img {
+  width: 360px;
+  max-width: min(84vw, 420px);
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+.page-shell.is-inner .logo img {
+  width: 160px;
+}
+
+.location-note {
+  margin: 0;
+}
+
+.location-note h4 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.page-shell.is-inner .location-note h4 {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+@media (max-width: 1024px) {
+  .page-shell.is-home #page-top.page-header {
     padding: 32px 20px 24px;
     gap: 18px;
+  }
+
+  .page-shell.is-inner #page-top.page-header {
+    padding: 14px 16px;
+  }
+
+  .page-shell.is-inner .logo img {
+    width: 132px;
+  }
+}
+
+.linear-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.linear-nav li {
+  display: flex;
+  align-items: center;
+}
+
+.linear-nav li + li::before {
+  content: '/';
+  margin: 0 12px;
+  color: var(--border);
+}
+
+.linear-nav a {
+  color: var(--text-h);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.linear-nav a:hover,
+.linear-nav a:focus-visible,
+.linear-nav a.is-active {
+  color: var(--accent);
+}
+
+.linear-nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .linear-nav ul {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+}
+
+.page-content {
+  padding: 28px 24px 40px;
+}
+
+.content-panel {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.content-panel h2 {
+  margin-bottom: 10px;
+}
+
+.content-panel p {
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .page-content {
+    padding: 20px 16px 28px;
+  }
+
+  .content-panel {
+    text-align: center;
   }
 }
 
