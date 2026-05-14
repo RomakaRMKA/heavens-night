@@ -12,6 +12,9 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    concurrency:
+      group: gh-pages-branch-deploy
+      cancel-in-progress: false
 
     steps:
       - name: Checkout
@@ -27,15 +30,16 @@ jobs:
         run: npm ci
 
       - name: Set deploy target
+        id: deploy_target
         run: |
           BRANCH_NAME="${GITHUB_REF_NAME}"
-          echo "DEPLOY_DIR=${BRANCH_NAME}" >> "$GITHUB_ENV"
-          echo "BASE_PATH=/${GITHUB_REPOSITORY#*/}/${BRANCH_NAME}/" >> "$GITHUB_ENV"
+          echo "deploy_dir=${BRANCH_NAME}" >> "$GITHUB_OUTPUT"
+          echo "base_path=/${GITHUB_REPOSITORY#*/}/${BRANCH_NAME}/" >> "$GITHUB_OUTPUT"
 
       - name: Build
         run: npm run build
         env:
-          VITE_BASE_PATH: ${{ env.BASE_PATH }}
+          VITE_BASE_PATH: ${{ steps.deploy_target.outputs.base_path }}
 
       - name: Deploy branch build
         uses: peaceiris/actions-gh-pages@v4
@@ -43,7 +47,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./dist
-          destination_dir: ${{ env.DEPLOY_DIR }}
+          destination_dir: ${{ steps.deploy_target.outputs.deploy_dir }}
           keep_files: true
           force_orphan: false
           enable_jekyll: false
