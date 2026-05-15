@@ -5,7 +5,6 @@ import MenuItemCard from './MenuItemCard'
 function MenuPage() {
   return (
     <section className="content-panel" id="menu">
-      <h2>Menu</h2>
       {menuItems.map((item) => (
         <MenuItemCard
           key={item.id}

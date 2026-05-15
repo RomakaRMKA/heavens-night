@@ -5,7 +5,6 @@ import staffMembers from '../data/staff.json'
 function StaffPage() {
   return (
     <section className="content-panel" id="staff">
-      <h2>Our Staff</h2>
       <div className="staff-grid">
         {staffMembers.map((member) => (
           <StaffMember
