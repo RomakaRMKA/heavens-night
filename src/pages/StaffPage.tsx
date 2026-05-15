@@ -1,13 +1,25 @@
+import StaffMember from './StaffMember'
+import './StaffPage.css'
+import staffMembers from '../data/staff.json'
+
 function StaffPage() {
   return (
     <section className="content-panel" id="staff">
-      <h2>Staff</h2>
-      <p>
-        This is your staff page body component. Add team member profiles,
-        roles, and presentation details here.
-      </p>
+      <h2>Our Staff</h2>
+      <div className="staff-grid">
+        {staffMembers.map((member) => (
+          <StaffMember
+            key={member.id}
+            portrait={member.portrait}
+            name={member.name}
+            job={member.job}
+            tags={member.tags}
+          />
+        ))}
+      </div>
     </section>
   )
 }
 
 export default StaffPage
+

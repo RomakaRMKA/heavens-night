@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "portrait": "src/assets/staff/image.png",
+    "name": "Shaina",
+    "job": "Dealer",
+    "tags": [
+      {"text": "She/Her", "color": "pink"},
+      {"text": "No ERP", "color": "red"}
+    ]
+  },
+  {
+    "id": 2,
+    "portrait": "src/assets/staff/image.png",
+    "name": "Cherry",
+    "job": "DJ",
+    "tags": [
+      {"text": "She/Her", "color": "pink"},
+      {"text": "No ERP", "color": "red"}
+    ]
+  },
+  {
+    "id": 3,
+    "portrait": "src/assets/staff/image.png",
+    "name": "Akumu",
+    "job": "Head Mistress",
+    "tags": [
+      {"text": "She/Her", "color": "pink"},
+      {"text": "No ERP", "color": "red"}
+    ]
+  }
+]
