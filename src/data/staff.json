@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "portrait": "src/assets/staff/tamamo.png",
+    "name": "Tamamo",
+    "job": "Owner and Hostess",
+    "tags": [
+      {"text": "She/Her", "color": "pink"},
+      {"text": "No ERP", "color": "red"}
+    ]
+  },
+  {
+    "id": 2,
+    "portrait": "src/assets/staff/akumu.png",
+    "name": "Akumu",
+    "job": "Head Mistress",
+    "tags": [
+      {"text": "She/Her", "color": "pink"},
+      {"text": "No ERP", "color": "red"}
+    ]
+  },
+  {
+    "id": 3,
+    "portrait": "src/assets/staff/cherry.png",
+    "name": "Cherry",
+    "job": "DJ",
+    "tags": [
+      {"text": "She/Her", "color": "pink"},
+      {"text": "No ERP", "color": "red"}
+    ]
+  },
+  {
+    "id": 4,
+    "portrait": "src/assets/staff/heavensnight_logo.png",
+    "name": "Shaina",
+    "job": "Blackjack Dealer",
+    "tags": [
+      {"text": "She/Her", "color": "pink"},
+      {"text": "No ERP", "color": "red"}
+    ]
+  }
+]

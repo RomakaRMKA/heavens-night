@@ -1,0 +1,53 @@
+name: Deploy branch builds to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: gh-pages-branch-deploy
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Set deploy target
+        id: deploy_target
+        run: |
+          BRANCH_NAME="${GITHUB_REF_NAME}"
+          echo "deploy_dir=${BRANCH_NAME}" >> "$GITHUB_OUTPUT"
+          echo "base_path=/${GITHUB_REPOSITORY#*/}/${BRANCH_NAME}/" >> "$GITHUB_OUTPUT"
+
+      - name: Build
+        run: npm run build
+        env:
+          VITE_BASE_PATH: ${{ steps.deploy_target.outputs.base_path }}
+
+      - name: Deploy branch build
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist
+          destination_dir: ${{ steps.deploy_target.outputs.deploy_dir }}
+          keep_files: true
+          force_orphan: false
+          enable_jekyll: false
