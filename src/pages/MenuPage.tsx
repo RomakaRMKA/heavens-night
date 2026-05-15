@@ -1,11 +1,19 @@
+import menuItems from '../data/menu.json'
+import './MenuPage.css'
+import MenuItemCard from './MenuItemCard'
+
 function MenuPage() {
   return (
     <section className="content-panel" id="menu">
       <h2>Menu</h2>
-      <p>
-        This is your menu page body component. Replace this with your real food
-        and drink listing.
-      </p>
+      {menuItems.map((item) => (
+        <MenuItemCard
+          key={item.id}
+          name={item.name}
+          description={item.description}
+          price={item.price}
+        />
+      ))}
     </section>
   )
 }

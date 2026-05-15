@@ -6,9 +6,7 @@ const navigationItems = [
   { key: 'home', label: 'Home', to: '/' },
   { key: 'menu', label: 'Menu', to: '/menu' },
   { key: 'services', label: 'Services', to: '/services' },
-  { key: 'staff', label: 'Staff', to: '/staff' },
-  { key: 'gallery', label: 'Gallery', to: '/gallery' },
-  { key: 'contact', label: 'Contact', to: '/contact' },
+  { key: 'staff', label: 'Staff', to: '/staff' }
 ]
 
 function App() {

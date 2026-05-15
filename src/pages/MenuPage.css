@@ -1,0 +1,22 @@
+.menu-item-name {
+    font-size: 1.25rem;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.menu-item-description {
+    font-style: italic;
+}
+
+.menu-item-card {
+    margin-bottom: 24px;
+}
+
+.menu-item-price {
+    font-size: 1.25rem;
+}
