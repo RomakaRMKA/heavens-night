@@ -73,7 +73,7 @@
 
 .page-shell.is-home #page-top.page-header {
   flex-grow: 1;
-  padding: 64px 24px 24px;
+  padding: 24px 24px 24px;
 }
 
 .page-shell.is-inner #page-top.page-header {

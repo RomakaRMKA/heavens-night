@@ -1,5 +1,5 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import maisonette9Logo from './assets/maisonette9_logo.png'
+import heavensnightLogo from './assets/heavensnight_logo.png'
 import './Home.css'
 
 const navigationItems = [
@@ -19,7 +19,7 @@ function App() {
     <div className={`page-shell ${isHomePage ? 'is-home' : 'is-inner'}`}>
       <section id="page-top" className="page-header">
         <div className="logo">
-          <img src={maisonette9Logo} />
+          <img src={heavensnightLogo} />
         </div>
         <nav aria-label="Primary" className="linear-nav">
           <ul>
