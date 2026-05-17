@@ -5,8 +5,9 @@
     "name": "Tamamo",
     "job": "Owner and Hostess",
     "tags": [
-      {"text": "She/Her", "color": "pink"},
-      {"text": "No ERP", "color": "red"}
+      {"text": "She/Her ", "color": "pink"},
+      {"text": "No ERP", "color": "red"},
+      {"text": "EN/FR", "color": "purple"}
     ]
   },
   {
@@ -16,7 +17,8 @@
     "job": "Head Mistress",
     "tags": [
       {"text": "She/Her", "color": "pink"},
-      {"text": "No ERP", "color": "red"}
+      {"text": "No ERP", "color": "red"},
+      {"text": "EN/FR", "color": "purple"}
     ]
   },
   {
@@ -26,17 +28,55 @@
     "job": "DJ",
     "tags": [
       {"text": "She/Her", "color": "pink"},
-      {"text": "No ERP", "color": "red"}
+      {"text": "No ERP", "color": "red"},
+      {"text": "EN/FR", "color": "purple"}
     ]
   },
   {
     "id": 4,
-    "portrait": "src/assets/staff/heavensnight_logo.png",
+    "portrait": "src/assets/staff/shaina.png",
     "name": "Shaina",
     "job": "Blackjack Dealer",
     "tags": [
       {"text": "She/Her", "color": "pink"},
-      {"text": "No ERP", "color": "red"}
+      {"text": "No ERP", "color": "red"},
+      {"text": "EN/FR", "color": "purple"}
+    ]
+  },
+  {
+    "id": 5,
+    "portrait": "src/assets/staff/tora.png",
+    "name": "Tora",
+    "job": "Host",
+    "tags": [
+      {"text": "He/Him - They/Them (NB)", "color": "blue"},
+      {"text": "Bisexual Sapphic", "color": "purple"},
+      {"text": "ERP Ok", "color": "green"},
+      {"text": "EN Only", "color": "red"}
+    ]
+  },
+  {
+    "id": 6,
+    "portrait": "src/assets/staff/mordy.png",
+    "name": "Mordy",
+    "job": "Barmaid / Photographer",
+    "tags": [
+      {"text": "She/Her", "color": "pink"},
+      {"text": "No ERP", "color": "red"},
+      {"text": "EN/FR", "color": "purple"}
+    ]
+  },
+  {
+    "id": 7,
+    "portrait": "src/assets/staff/hwa.png",
+    "name": "Hwa",
+    "job": "Host / Medic",
+    "tags": [
+      {"text": "He/They", "color": "purple"},
+      {"text": "No ERP", "color": "red"},
+      {"text": "EN/FR", "color": "purple"}
     ]
   }
+  
+
 ]
