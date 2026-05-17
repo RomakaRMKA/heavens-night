@@ -1,5 +1,6 @@
 .staff-grid {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
   margin-top: 24px;
   justify-content: center;
@@ -163,4 +164,8 @@
   .staff-member-name {
     font-size: 1.1rem;
   }
+}
+
+#staff {
+  max-width: 100%
 }
